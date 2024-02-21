@@ -8,10 +8,10 @@ Container with SMBv1 built-in
 services:
   smbv1:
     image: ghcr.io/santobert/smbv1:main
+    environment:
+      PASS: "smbv1"
     volumes:
       - /opt/paperless/consume:/media/consume
-    environment:
-      - PASS: "smbv1"
     ports:
       - 137:137
       - 138:138
